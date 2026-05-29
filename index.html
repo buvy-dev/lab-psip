@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+            showName() {
+                alert(this.name);
+            }
+        }
+
+        class WelcomeMessage {
+            constructor(userName) {
+                this.userName = userName;
+            }
+            showMessage() {
+                let message = 'Привет, ' + this.userName;
+                alert(message);
+            }
+        }
+
+        class NameReverser {
+            constructor(name) {
+                this.name = name;
+            }
+            reverseName() {
+                let reversed = this.name.split('').reverse().join('');
+                alert(reversed);
+            }
+        }
+
+        let user = new User("Тимофей");
+        user.showName();
+
+        let messenger = new WelcomeMessage('Тимофей');
+        messenger.showMessage();
+
+        let reverser = new NameReverser("Тимофей");
+        reverser.reverseName();
+    </script>
+</body>
+</html>
+
